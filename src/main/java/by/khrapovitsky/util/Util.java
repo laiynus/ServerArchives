@@ -30,7 +30,7 @@ public class Util {
         Writer writer = null;
         try {
             file = new File(path);
-            writer = new BufferedWriter(new FileWriter(file));
+            writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "UTF-8"));
             writer.write(textNote);
         }catch (IOException  e){
             e.printStackTrace();
